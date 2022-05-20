@@ -1,0 +1,41 @@
+<div class="card" style="width: 40rem;">
+  <div class="card-body form">
+
+    <%= form_with(model: post) do |form| %>
+      <% if post.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+            <% post.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= form.label :title, style: "display: block" %>
+        <%= form.text_field :title, class:'form-control' %>
+      </div>
+
+      <div class="form-group py-2">
+        <%= form.label :author, style: "display: block" %>
+        <%= form.text_field :author, class:'form-control' %>
+      </div>
+
+      <div class="form-group py-2">
+        <%= form.label :description, style: "display: block" %>
+        <%= form.text_area :text, class:'form-control', style:'height:250px' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.number_field  :user_id, id: :post_user_id, value: current_user.id, type: :hidden %>
+      </div>
+
+      <div class='actions py-4 pb-0'>
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>

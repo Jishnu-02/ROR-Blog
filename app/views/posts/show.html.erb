@@ -1,0 +1,37 @@
+<div class="showCardRow">
+  <div class="leftcolumn mb-4">
+    <div class="showCard d-flex align-items-center justify-content-between px-0">
+      <div class="d-flex">
+        <%= link_to posts_path, class:' m-2' do %>
+          <%= image_tag "back3.png", height: 27 %>
+        <% end%>
+        <h2><%=@post.title%></h2>
+      </div>
+      
+      <%if user_signed_in?%>
+        <%= link_to edit_post_path(@post), class:'px-3' do %>
+          <%= image_tag "edit.svg", height: 30 %>
+        <% end%>
+      <% end%>
+      
+    </div>
+    <div class="showCard px-5">
+      <p><%=@post.text%></p>
+    </div>
+    <%if user_signed_in?%>
+      <div class='d-flex'>
+        <%= button_to "Delete", @post, method: :delete, class:'mt-2 btn btn-secondary' %>
+      </div>
+    <% end%>
+  </div>
+
+  <div class="rightcolumn  mb-4">
+    <div class="showCard">
+      <h2>Author:</h2>
+      <p><%=@post.author%></p>
+      <h5 class="fw-bolder">Email:</h5>
+      <p><%= User.find(@post.user_id).email%></p>
+    </div>
+  </div>
+</div>
+
