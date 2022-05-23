@@ -9,11 +9,6 @@
       
         <div class='d-flex'>
           <ul class="navbar-nav mr-auto">
-            <%if user_signed_in?%>
-              <li class="nav-item text-white" >
-                Welcome <%= current_user.email %>
-              </li>           
-            <% end%>
             <li class="nav-item text-white">
                 <%= link_to 'Blogs', posts_path, class:"nav-link" %>
             </li>
@@ -30,6 +25,15 @@
             </li>
             <% end%>
           </ul>
+        </div>
+        <div>
+          <%if user_signed_in?%>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item text-white text-decoration-none  " >
+              Welcome <%= current_user.email %>
+            </li> 
+          </ul>          
+          <% end%>
         </div>
     </div>
   </div>
