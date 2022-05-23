@@ -153,7 +153,10 @@
     background: #ddd;
     margin-top: 20px;
   }
-  
+
+  .homeJumbotron{
+     --bs-bg-opacity: 0.8;
+  }
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 800px) {
     .leftcolumn, .rightcolumn {   
@@ -220,6 +223,14 @@
     .sessionCard{
       width: 24.5rem !important;
     }
+
+    .showHeaderDiv{
+      display: inline-block;
+      white-space: nowrap; 
+      width: 260px; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
 
@@ -265,5 +276,13 @@
 
     .showPostHeader{
       font-size: 24px;
+    }
+
+    .showHeaderDiv{
+      display: inline-block;
+      white-space: nowrap; 
+      width: 230px; 
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
