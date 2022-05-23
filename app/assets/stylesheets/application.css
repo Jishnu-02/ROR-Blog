@@ -21,12 +21,26 @@
   /* Add a gray background color with some padding */
   body {
     font-family: Arial;
-    background: #f1f1f1;
+    background: #09203f;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(bgi.jpg);
   }
 
+  .showBtnDiv{
+    display: contents !important;
+  }
+
+  .showHeaderDiv{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+
+  .showPostHeader{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
   /* Adjusting navbar opacity */
   .navbg.bg-dark {
     --bs-bg-opacity: 0.6;
@@ -37,6 +51,7 @@
     background-color: #0cbaba;
     background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
     color: azure;
+    font-size: 1.75rem
   }
   
   .listHead{
@@ -173,21 +188,7 @@
       line-height: 1.5;
     }
 
-    .showBtnDiv{
-      display: contents !important;
-    }
-
-    .showHeaderDiv{
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-  }
-
-  @media screen and (max-width: 821px) {
-
-    body {
-      background-image: url(bgi-ipad-mini.jpg);
-    }
+   
   }
 
 
@@ -195,14 +196,29 @@
 
     body {
       background-image: url(bgi-ipad-pro.jpg);
+      min-height: 100vh;
     }
   }
 
-  @media screen and (max-width: 416px) {
+  @media screen and (max-width: 821px) {
+
+    body {
+      background-image: url(bgi-ipad-mini.jpg);
+      min-height: 100vh;
+    }
+  }
+
+
+  @media screen and (max-width: 415px) {
 
     body {
       background-image: url(bgi-ph.jpg);
       background-size: cover;
+      min-height: 100vh;
+    }
+
+    .sessionCard{
+      width: 24.5rem !important;
     }
   }
 
@@ -212,5 +228,42 @@
     body {
       background-image: url(bgi-ph-2.jpg);
       background-size: cover;
+      min-height: 100vh;
+    }
+
+    .sessionCard{
+      width: 22rem !important;
+    }
+
+    .listHeader, .h1{
+      font-size: 24px !important;
+    }
+
+    .add-btn{
+      height:27px
+    }
+
+    .showHeaderDiv{
+      font-size: 18px !important;
+    }
+
+    .showBtn{
+      /* color: #212529; */
+      color: #ddd;
+      font-weight: 400;
+      line-height: 1.5;
+      font-size:0.8rem !important
+    }
+
+    .authorName{
+      font-size: 14px !important;
+    }
+
+    .editImg{
+      height:25px
+    }
+
+    .showPostHeader{
+      font-size: 24px;
     }
   }

@@ -5,18 +5,18 @@
         <%= link_to posts_path, class:' m-2' do %>
           <%= image_tag "back3.png", height: 27 %>
         <% end%>
-        <h2><%=@post.title%></h2>
+        <h2 class="showPostHeader"><%=@post.title%></h2>
       </div>
       
       <%if user_signed_in?%>
         <%= link_to edit_post_path(@post), class:'px-3' do %>
-          <%= image_tag "edit.svg", height: 30 %>
+          <%= image_tag "edit.svg", class:'editImg',height: 30 %>
         <% end%>
       <% end%>
       
     </div>
     <div class="showCard px-5">
-      <p><%=@post.text%></p>
+      <p class="post"><%=@post.text%></p>
     </div>
     <%if user_signed_in?%>
       <div class='d-flex'>

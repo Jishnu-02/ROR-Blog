@@ -1,49 +1,36 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark navbg">
-<%= link_to 'Ruby 💎', root_path, class:"navbar-brand mx-2" %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-dark navbg">
+<div class="container-fluid">
+  <%= link_to 'BG Spot', root_path, class:"navbar-brand mx-1" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"           aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="mx-auto collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-    
-      <div class='d-flex'>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item text-white">
-              <%= link_to 'Blogs', posts_path, class:"nav-link" %>
-          </li>
-
-          <%if user_signed_in?%>
-          
-          <li class="nav-item text-white">
-            <%= button_to 'SignOut', destroy_user_session_path, method: :delete, class:'btn border-0 nav-link' %>
-          </li>  
-
-          <li class="nav-item text-white">
-            <%= button_to 'Edit Profile', edit_user_registration_path, method: :get, class:'btn border-0 nav-link' %>
-          </li>  
-
-          <% else%>
-
-          <li class="nav-item text-white">
-            <%= link_to 'SignIn', user_session_path, class:"nav-link" %>
-          </li>
-          
-          <% end%>
-        </ul>
-      </div>
-
-      <div class="mx-3">
-        <ul class="navbar-nav pr-2">
-          
-          <%if user_signed_in?%>
-
-          <li class="nav-item text-white" >
-          Welcome <%= current_user.email %>
-          </li>
-          
-          <% end%>
-
-        </ul>
-      </div>
+    <div class="mx-auto collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+      
+        <div class='d-flex'>
+          <ul class="navbar-nav mr-auto">
+            <%if user_signed_in?%>
+              <li class="nav-item text-white" >
+                Welcome <%= current_user.email %>
+              </li>           
+            <% end%>
+            <li class="nav-item text-white">
+                <%= link_to 'Blogs', posts_path, class:"nav-link" %>
+            </li>
+            <%if user_signed_in?%>           
+            <li class="nav-item text-white">
+              <%= button_to 'SignOut', destroy_user_session_path, method: :delete, class:'btn border-0 nav-link' %>
+            </li>  
+            <li class="nav-item text-white">
+              <%= button_to 'Edit Profile', edit_user_registration_path, method: :get, class:'btn border-0 nav-link' %>
+            </li>  
+            <% else%>
+            <li class="nav-item text-white">
+              <%= link_to 'SignIn', user_session_path, class:"nav-link" %>
+            </li>
+            <% end%>
+          </ul>
+        </div>
+    </div>
   </div>
 </nav>

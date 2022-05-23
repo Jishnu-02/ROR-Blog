@@ -19,8 +19,8 @@
           <div class="row">
             <div class="column">
               <div class="d-flex listCard justify-content-between align-items-center">
-                <div class="">
-                  <p class="text-light showHeaderDiv"><%= post.title %></p>
+                <div>
+                  <span  class="d-inline-block text-truncate text-light showHeaderDiv" style="max-width: 230px;"><%= post.title %></span>
                 </div>
                 <p class="showBtnDiv">
                 <%= link_to "Show", post, class:'btn btn-dark showBtn' %>
@@ -35,9 +35,9 @@
         <div class="row">
           <div class="column">
             <div class="d-flex listCard justify-content-between align-items-center">
-              <div>
-                <p><%= post.title %></p>
-                <h5><%= post.author %></h5>
+              <div class:'text-truncate'>
+                <span  class="d-inline-block text-truncate text-light showHeaderDiv" style="max-width: 230px;"><%= post.title %></span>
+                <h5 class='authorName'><%= post.author %></h5>
               </div>
               <p class="showBtnDiv">
               <%= link_to "Show", post, class:'btn btn-dark showBtn' %>
