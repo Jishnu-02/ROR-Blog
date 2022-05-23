@@ -232,6 +232,18 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
+    .homeHead{
+      font-size: 24px !important;
+    }
+
+    .homeLead{  
+      font-size: 18px !important;
+    }
+
+    .homePara{
+      font-size: 16px !important;
+    }
   }
 
 
