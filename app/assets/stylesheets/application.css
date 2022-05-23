@@ -246,7 +246,12 @@
     }
   }
 
-
+  .blogify{
+    background: #D63CC1;
+    background: linear-gradient(to right, #D63CC1 24%, #1DCFAB 57%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   @media screen and (max-width: 376px) {
 
     body {
