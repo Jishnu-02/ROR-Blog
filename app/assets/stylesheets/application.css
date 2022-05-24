@@ -45,20 +45,26 @@
   .navbg.bg-dark {
     --bs-bg-opacity: 0.6;
   }
+
+  .navbarLinks{
+    color: #fdfdfd !important;
+  }
   
   /* Listcard background and text(blog/index) */
   .listCard{
-    background-color: #0cbaba;
+    background-color: #0cbaba, .8;
     background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
     color: azure;
-    font-size: 1.75rem
+    font-size: 1.75rem;
+    opacity: 0.9;
+    
   }
   
   .listHead{
     background-color: #537895;
     background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
     color: azure;
-
+    opacity: 0.9;
   }
 
   /* Listcard background and text(blog/index) */
@@ -66,6 +72,7 @@
     background-color: #0cbaba;
     background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
     color: azure;
+    opacity: 0.9;
 
   }
 
@@ -222,7 +229,7 @@
     }
 
     .sessionCard{
-      width: 24.5rem !important;
+      width: 24rem !important;
     }
 
     .showHeaderDiv{
@@ -248,7 +255,7 @@
 
   .blogify{
     background: #D63CC1;
-    background: linear-gradient(to right, #D63CC1 24%, #1DCFAB 57%);
+    background: linear-gradient(to right, #D63CC1 34%, #1DCFAB 57%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
