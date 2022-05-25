@@ -1,5 +1,5 @@
 <div class="card border border-dark sessionCard" style="width: 40rem;">
-  <h2 class="card-header bg-dark text-light deviseCard">Sign up</h2>
+  <h2 class="card-header bg-dark text-light deviseCard ">Don't have a spell...? Let's Create One...</h2>
   <div class="card-body deviseCardBody">
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -30,10 +30,10 @@
 
   </div>
 
-  <div class="card-footer border border-dark text-center deviseCard">
+  <div class="card-footer border border-dark text-center deviseCard p-3">
     <%# <%= render "devise/shared/links" %>
     <%- if controller_name != 'sessions' %>
-      <%= link_to "Log in", new_session_path(resource_name), class:'text-decoration-none text-light' %><br />
+      <%= link_to "Log in", new_session_path(resource_name), class:'text-decoration-none text-light ' %><br />
     <% end %>
   </div>
 
