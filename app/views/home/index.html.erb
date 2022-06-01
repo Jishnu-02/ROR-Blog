@@ -1,6 +1,17 @@
 <div>
     <div class="jumbotron bg-dark homeJumbotron text-light">
         <div class="p-3">
+         <%if user_signed_in?%>
+            <h2 class="display-6 homeHead">Huhhhh... Finally, The Prodigious Daughter of Aretuza has returned...</h2>
+            <p class="lead homeLead">When the death-eaters arrived, we were missing you here. You might have been able to assist in lowering the number of casualties.</p>
+            <p class="lead homeLead">The death-eaters were enticed away by Hogwarts wizards and witches. Do you recall the name Harry Potter? He came along with them to assist us, He's precisely like what we heard, therefore it's no surprise that he's the only one who can potentially defeat <b class="voldemort">He-Who-Must-Not-Be-Named</b>.</p>
+            <hr class="my-4">
+            <p class="lead homeLead">Be carefull of what you cast, you could possibly bring them back...</p>
+            <p class="lead homeLead">You know that the chaos has a way of finding you, don't bring it here.</p>
+            <p class="lead homeLead">Help us to rebuild this wretched world; Perhaps that's your destiny...</p>
+            <hr class="my-4">
+            <h3 class="homeHead">Welcome Back Witch🧙‍♀️ To Your Home, The World Of "<b class='blogify'>Blogify...</b>"</h3>
+        <%else%>
             <h1 class="display-4 homeHead">Hello, Guys!</h1>
             <p class="lead homeLead">This is simply a simple blog where you may write whatever you like.</p>
             <hr class="my-4">
@@ -12,6 +23,8 @@
             <br />
             <h4>We Welcome You To The World Of <b class='blogify'>Blogify...</b>🤓</h4>
             <p class="lead">Now Let's Cast The Spell Of Freedom With Our Own Words And Thoughts🔮</p>
+        <%end%>
+            
         </div>
     </div>
 </div>
