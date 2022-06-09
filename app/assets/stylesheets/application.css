@@ -211,7 +211,7 @@
    
     body {
       background-image: url(bgi-ipad-mini.jpg);
-      min-height: 100%;
+      min-height: 100vh;
     }
 
     .listHeader, .h1{
